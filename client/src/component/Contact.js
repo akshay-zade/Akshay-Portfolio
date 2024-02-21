@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React , {useState} from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
+
 import contactImg from "../assets/img/contact-img.svg"
-import { json } from 'express';
-
-
 
 export const Contact = () => {
     const intialFromDetails = {
@@ -17,7 +15,7 @@ export const Contact = () => {
     const [fromDetails, setFromDetails] = useState(intialFromDetails);
     const [buttonText, setButtonText] = useState('Send');
     const [status, setStatus] = useState({});
-  
+
     const onFromUpdate = (category , value) => {
         setFromDetails({
             ...fromDetails,
@@ -26,28 +24,28 @@ export const Contact = () => {
     }
 
     const handleSubmit = async(e) => {
-       e.preventDefault();
-       setButtonText("sending....")
-
-       let response = await fetch("http://localhost:5000/contact" , {
-        method: "POST",
-        headers: {
-            "Content-Type": "Application/json;charset=utf-8"
-        },
-        body: json.stringify(fromDetails)
-       } )
-       setButtonText("send");
-       let result = response.json();
-       setFromDetails(intialFromDetails)
-       if(result.code === 200){
-        setStatus({ success: true, massage: "Massage send successfully"  })
-       }else {
-        setStatus({ success: false})
-       }
-    }
-    
-    return (
-        <section className='contact' id='connect' >
+        e.preventDefault();
+        setButtonText("sending....")
+ 
+        let response = await fetch("http://localhost:5000/contact" , {
+         method: "POST",
+         headers: {
+             "Content-Type": "Application/json;charset=utf-8"
+         },
+         body: JSON.stringify(fromDetails)
+        } )
+        setButtonText("send");
+        let result = response.json();
+        setFromDetails(intialFromDetails)
+        if(result.code === 200){
+         setStatus({ success: true, massage: "Massage send successfully"  })
+        }else {
+         setStatus({ success: false})
+        }
+     }
+  
+  return (
+    <section className='contact' id='connect' >
             <Container>
                 <Row className='align-item-center' >
                     <Col md={6} >
@@ -81,9 +79,11 @@ export const Contact = () => {
                                 }
                             </Row>
                         </form>
+                        
                     </Col>
                 </Row>
             </Container>
         </section>
-    )
+  )
 }
+
