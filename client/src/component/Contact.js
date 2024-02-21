@@ -40,7 +40,7 @@ export const Contact = () => {
         if(result.code === 200){
          setStatus({ success: true, massage: "Massage send successfully"  })
         }else {
-         setStatus({ success: false})
+         setStatus({ success: false , massage: "something went wrong, please try again later."})
         }
      }
   
@@ -74,7 +74,7 @@ export const Contact = () => {
                                 {
                                     status.message &&
                                     <Col>
-                                        <p className={status.success == false ? "danger" : "success" } >{status.message}</p>
+                                        <p className={status.success === false ? "danger" : "success" } >{status.message}</p>
                                     </Col>
                                 }
                             </Row>

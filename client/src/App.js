@@ -5,6 +5,7 @@ import { NavBar } from './component/NavBar';
 import { Skills } from './component/Skills';
  import { Projects } from './component/Projects';
  import { Contact } from './component/Contact';
+import { Footer } from './component/Footer';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 }
