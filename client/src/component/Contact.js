@@ -56,19 +56,19 @@ export const Contact = () => {
                         <form onSubmit={handleSubmit} >
                             <Row>
                                 <Col sm={6} className='px-1' >
-                                    <input type='text' value={fromDetails.firstname} placeholder='First Name' onChange={(e)=> onFromUpdate("firstname" , e.target.value)} />
+                                    <input type='text' value={fromDetails.firstname} placeholder='First Name' onChange={(e)=> onFromUpdate("firstname" , e.target.value)} required />
                                 </Col>
                                 <Col sm={6} className='px-1' >
-                                <input type='text' value={fromDetails.lastname} placeholder='Last Name' onChange={(e)=> onFromUpdate("lastname" , e.target.value)} />
+                                <input type='text' value={fromDetails.lastname} placeholder='Last Name' onChange={(e)=> onFromUpdate("lastname" , e.target.value)} required />
                                 </Col>
                                 <Col sm={6} className='px-1' >
-                                <input type='email' value={fromDetails.email} placeholder='Email' onChange={(e)=> onFromUpdate("email" , e.target.value)} />
+                                <input type='email' value={fromDetails.email} placeholder='Email' onChange={(e)=> onFromUpdate("email" , e.target.value)} required />
                                 </Col>
                                 <Col sm={6} className='px-1' >
-                                <input type='number' value={fromDetails.phone} placeholder='Number' onChange={(e)=> onFromUpdate("number" , e.target.value)} />
+                                <input type='number' value={fromDetails.phone} placeholder='Number' onChange={(e)=> onFromUpdate("phone" , e.target.value)} required />
                                 </Col>
                                 <Col sm={6} className='px-1' >
-                                <textarea rows={6} value={fromDetails.message} placeholder='Message' onChange={(e)=> onFromUpdate("message" , e.target.value)} />
+                                <textarea rows={6} value={fromDetails.message} placeholder='Message' onChange={(e)=> onFromUpdate("message" , e.target.value)} required />
                                 <button type='submit' ><span>{buttonText}</span></button>
                                 </Col> 
                                 {

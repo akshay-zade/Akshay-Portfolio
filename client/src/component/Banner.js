@@ -56,7 +56,7 @@ export const Banner = () => {
                 <span className='tagline' >Welcome to my Portfolio</span>
                 <h1>{`Hi I'm Akshay Zade `}<span className='wrap'>{text}</span></h1>
                 <p>A Full Stack Web Developer is a professional who possesses expertise in both front-end and back-end development, enabling them to work on all aspects of web application development. </p>
-                <button onClick={() => console.log("connect")} >Let's connect <ArrowRightCircle size={25} /> </button>
+                <a href='#connect' > <button  onClick={() => console.log("connect")} >Let's connect <ArrowRightCircle size={25} /> </button></a>  
               </div>
             }
              
