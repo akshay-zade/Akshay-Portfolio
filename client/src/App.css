@@ -618,6 +618,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 h1.headingFooter {
   font-size: 50px;
   font-weight: 900;
+  text-align: center;
 }
 .footer p {
   font-weight: 400;
