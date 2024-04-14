@@ -41,6 +41,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: normal;
 }
+h1.navHeading {
+  color: white;
+  font-weight: 900;
+  /* font-size: 40px; */
+}
 
 p, a, li, button, ul {
   margin: 0;
@@ -615,4 +620,77 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+@media only screen and (max-width: 768px) {
+
+  .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 20px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+.banner h1 {
+  font-size: 50px;
+  
+}
+.banner img {
+  margin-top: 4rem;
+}
+.banner button {
+  margin-top: 40px;
+}
+.skill-bx {
+  
+  padding: 30px 50px;
+  margin-top: 4px;
+}
+.skill p {
+  
+  margin: 14px 0 61px 0;
+}
+.banner {
+ 
+  padding: 240px 0 100px 0;
+}
+.newsletter-bx {
+  background: #FFFFFF;
+  border-radius: 55px;
+  color: #121212;
+  padding: 75px 12px;
+  margin-bottom: 80px;
+  margin-top: -122px;
+}
+.new-email-bx button {
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  padding: 10px 30px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 18px;
+}
+.newsletter-bx h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.2em;
+  text-align: center;
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: calc(-1* var(--bs-gutter-y));
+  margin-right: calc(-.5* var(--bs-gutter-x));
+  margin-left: calc(-.5* var(--bs-gutter-x));
+  flex-direction: column;
+}
 }

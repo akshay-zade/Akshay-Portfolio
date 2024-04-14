@@ -36,7 +36,7 @@ const onUpdateActiveLink = (value) => {
          <Navbar  className={scolled ? "scolled": "" } >
         <Container>
           <Navbar.Brand href="#">
-            <img src={logo} alt='Logo'   />
+           <h1 className='navHeading'>AKKI</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className='navbar-toggler-icon'   ></span>
